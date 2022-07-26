@@ -79,3 +79,68 @@ array =[2,"hello",34,2.3]
 puts array.length
 puts array[1]
 puts array[-1]
+
+
+#  N dimension array 
+num_grid=[[1,5,1],[10,1,6]]
+num_grid[0][0]=80
+
+puts num_grid[0][0]
+puts num_grid[1][1] # goes for the smallest of 2 arrays 
+
+
+people=[]
+people.push("shreya")
+people.push("shet")
+people.push("s")
+
+puts people
+puts people.length
+
+puts people.reverse
+puts people.include? "s"
+
+
+# methods 
+def add_num(num1,num2=10)
+    return num1+num2
+end
+
+puts sum=add_num(2,3)
+
+# conditional statements
+is_student=false
+is_smart=false
+
+
+if is_student and is_smart
+    puts "bitch you smart"
+elsif is_student or is_smart 
+    puts "nope you still dumb arent you"
+else
+    puts "dumb bitch"
+end
+
+# switch statements
+my_grade="A"
+case my_grade
+when "A" 
+    puts "bitch you smart"
+when "F"
+    puts "bitch you dumb"
+else
+    puts "whtever"
+end
+
+
+# Dictionaries ((u)key=>value)
+
+test_grades={
+    # we can write keys in this manner:
+    "shreya"=>"A",
+    "shet"=>"w"
+    :mohan=>"C"
+    2=>"ERER"
+}
+test_grades["shreya"]
+test_grades[:mohan]
