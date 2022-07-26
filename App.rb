@@ -178,3 +178,110 @@ bag.each do |i|
 end
 
 # exception catching
+begin
+    num=1000/0
+rescue 
+    puts "error"
+end
+
+# addressing specific type of error 
+
+# begin
+#     num 2/0
+# rescue ZeroDivisionError
+#     puts "error in ZeroDivisionError "
+#     rescue
+#         puts "for all other errors"
+    
+# end
+
+# to make error of your own:
+# raise "made up exeception"
+
+
+# class
+class Book
+    attr_accessor :title , :author  #this are the attributes 
+
+    #  constructor:
+
+    def initialize(title,author) # constructor is initialised by initialze keyword
+        self.title= title
+        @author=author
+    end
+
+
+    def readBook()
+        puts "i am reading #{self.title} by #{@author}" 
+    end
+end
+
+book1= Book.new("shet" , "man")
+# book1.title = "manaman"
+# book1.author="qwewew"
+
+book1.readBook()
+
+
+
+# getters and setters
+
+# inheritance
+class Chef 
+
+    attr_accessor :name,:age
+    def initialize (name,age)
+        @name=name
+        @age=age
+    end
+
+
+    def make_food1()
+    puts "food 1 is cooking"
+    end
+
+    def make_food2()
+        puts "food 2 is cooking"
+    end
+    def make_food3()
+        puts "food 3 is cooking"
+    end
+end
+
+class ItalianChef < Chef # IT MEANS ItalianChef IS INHERTITING ALL THE FUNCTIONALITY FROM CHEF
+
+
+    # while using constructors we can put the inherited class mein additional info:
+
+   attr_accessor :country
+     def initialize (name,age,country)
+    @country=country
+   super(name,age) # calling the constructor of super class froma above
+  end
+
+
+    def make_something()
+        puts "something is made"
+    end
+    def make_food3()
+        puts "food 3 is cooking"
+    end
+
+    def make_something2()
+        puts "something is made 2"
+    end
+end
+
+
+my_chef=Chef.new("shet",40)
+my_chef.make_food3()
+
+my_italianChef=ItalianChef.new("shreya",30,"india")
+my_italianChef.make_food3()
+my_italianChef.make_food1() # italian chef has inherited all the functionalities of chef
+my_italianChef.make_something2()
+
+
+
+
+
