@@ -137,10 +137,44 @@ end
 
 test_grades={
     # we can write keys in this manner:
+
     "shreya"=>"A",
-    "shet"=>"w"
-    :mohan=>"C"
-    2=>"ERER"
+    "shet"=>"w",
+    :mohan=>"C",
+    2=>23
 }
 test_grades["shreya"]
 test_grades[:mohan]
+test_grades["shet"]="C"
+test_grades[2]  # 2 is the key here
+
+
+# loop
+age=12
+while age<=20
+    puts age
+    age+=1
+end
+
+for age in 0..5 # for all num between 0 to 5
+  puts age 
+end
+
+
+name=2
+
+5.times do |name|
+    puts name
+end
+
+bag=[10,20,30,40,50]
+for item in bag
+    puts item
+
+end
+
+bag.each do |i|
+    puts i
+end
+
+# exception catching
